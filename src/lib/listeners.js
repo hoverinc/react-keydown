@@ -18,6 +18,7 @@ const Listeners = {
   bindKeys( callback ) {
     if ( !_keysBound ) {
       document.addEventListener( 'keydown', callback );
+      document.addEventListener( 'keyup', callback );
       _keysBound = true;
     }
   },
@@ -30,6 +31,7 @@ const Listeners = {
   unbindKeys( callback ) {
     if ( _keysBound ) {
       document.removeEventListener( 'keydown', callback );
+      document.removeEventListener( 'keyup', callback );
       _keysBound = false;
     }
   },
